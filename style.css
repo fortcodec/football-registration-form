@@ -1,0 +1,132 @@
+:root {
+  --bg: #0b1020;
+  --card: #171e38;
+  --muted: #94a3b8;
+  --primary: #4f46e5;
+  --success: #10b981;
+  --radius: 14px;
+}
+
+.message {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+* { box-sizing: border-box; }
+
+html{
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: radial-gradient(circle at top left, rgba(79,70,229,0.25), transparent 40%),
+              radial-gradient(circle at bottom right, rgba(2,132,199,0.25), transparent 40%),
+              #0b1020;
+  color: #e5e7eb;
+}
+
+body{
+  background-image: url('rugby-sport-environment-filed.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  width: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.form-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.container {
+  max-width: 700px;
+  margin: 5vh auto;
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(23,30,56,0.95);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.75rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #0b1222;
+  color: #e2e8f0;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(99,102,241,.25);
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+button {
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform .05s ease-in-out;
+}
+button:hover { transform: translateY(-1px); }
+button:active { transform: translateY(1px) scale(0.98); }
+
+.message {
+  text-align: center;
+  margin-top: 0.75rem;
+  min-height: 1.2em;
+  font-weight: 600;
+}
+
+.message.success {
+  color: var(--success);
+}
+@media (max-width: 600px) {
+  .card { padding: 1rem; }
+}
